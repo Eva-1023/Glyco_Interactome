@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 from pyvis.network import Network
 import got 
 import os 
-
+def contact_tab():
+    st.title('Contact Us')
+    st.write("You can reach out to us at contact@example.com")
 #Network(notebook=True)
 st.title('Glyco Interactome Network')
 # make Network show itself with repr_html
@@ -30,7 +32,9 @@ option=st.sidebar.selectbox('select graph',(graph_set))
 
 HtmlFile = open(path+option+'.html', 'r', encoding='utf-8')
 source_code = HtmlFile.read() 
-components.html(source_code, height = 1200,width=1000)
+components.html(source_code, height = 1600,width=1000)
 
 
-
+# Add a "Contact" tab to the sidebar
+if st.sidebar.button('Contact'):
+    contact_tab()
