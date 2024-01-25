@@ -33,5 +33,4 @@ source_code = HtmlFile.read()
 components.html(source_code, height = 900,width=900)
 
 
-got.got_func(physics)
 
