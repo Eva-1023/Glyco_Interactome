@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ff0000", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "star", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "236", "label": "ARF6", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "583", "label": "CPNE1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "519", "label": "PLAUR", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "515", "label": "RAP2C", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "509", "label": "S100A9", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "507", "label": "SACM1L", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "196", "label": "SLC7A5", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "452", "label": "VDAC1", "shape": "dot", "size": 15}]);
+                  edges = new vis.DataSet([{"from": "248", "title": "SUID: 1019\u003cbr\u003eshared name: EGFR (interacts with) ARF6\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ARF6\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 84.67243\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "236"}, {"from": "248", "title": "SUID: 1017\u003cbr\u003eshared name: EGFR (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 56.02181\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "248", "title": "SUID: 1015\u003cbr\u003eshared name: EGFR (interacts with) S100A9\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) S100A9\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 1962.31\u003cbr\u003efavorable: Undecorated\u003cbr\u003eunfavorable: None", "to": "509"}, {"from": "248", "title": "SUID: 1013\u003cbr\u003eshared name: EGFR (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 45.15472\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "196"}, {"from": "248", "title": "SUID: 1011\u003cbr\u003eshared name: EGFR (interacts with) VDAC1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) VDAC1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 59.16802\u003cbr\u003efavorable: Sia\u003cbr\u003eunfavorable: None", "to": "452"}, {"from": "244", "title": "SUID: 1009\u003cbr\u003eshared name: BSG (interacts with) ARF6\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ARF6\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 31.10061\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "236"}, {"from": "244", "title": "SUID: 1007\u003cbr\u003eshared name: BSG (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 35.56576\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "244", "title": "SUID: 1005\u003cbr\u003eshared name: BSG (interacts with) CPNE1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CPNE1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 41.34564\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "583"}, {"from": "244", "title": "SUID: 1003\u003cbr\u003eshared name: BSG (interacts with) EGFR\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) EGFR\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 97.68997\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "248"}, {"from": "244", "title": "SUID: 1001\u003cbr\u003eshared name: BSG (interacts with) SACM1L\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SACM1L\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 230.4299\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "507"}, {"from": "244", "title": "SUID: 999\u003cbr\u003eshared name: BSG (interacts with) SLC3A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC3A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 43.3126\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "238"}, {"from": "244", "title": "SUID: 997\u003cbr\u003eshared name: BSG (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 17.62607\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "196"}, {"from": "244", "title": "SUID: 995\u003cbr\u003eshared name: BSG (interacts with) VDAC1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) VDAC1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 101.5567\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "452"}, {"from": "242", "title": "SUID: 993\u003cbr\u003eshared name: CD44 (interacts with) PLAUR\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: CD44 (interacts with) PLAUR\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.963\u003cbr\u003eMaxScore: 101.3298\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "519"}, {"from": "242", "title": "SUID: 991\u003cbr\u003eshared name: CD44 (interacts with) RAP2C\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: CD44 (interacts with) RAP2C\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 101.9461\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "515"}, {"from": "242", "title": "SUID: 989\u003cbr\u003eshared name: CD44 (interacts with) S100A9\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: CD44 (interacts with) S100A9\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 85.52853\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "509"}, {"from": "238", "title": "SUID: 987\u003cbr\u003eshared name: SLC3A2 (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 66.66482\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "196"}, {"from": "238", "title": "SUID: 985\u003cbr\u003eshared name: SLC3A2 (interacts with) VDAC1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) VDAC1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 149.0002\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None", "to": "452"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 14, "face": "arial", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": true}, "physics": {"barnesHut": {"gravitationalConstant": -80000, "centralGravity": 0.3, "springLength": 95, "springConstant": 0.04, "damping": 0.09, "avoidOverlap": 0}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

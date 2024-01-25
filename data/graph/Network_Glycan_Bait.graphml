@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="degree.layout" attr.type="int" for="node" id="degree.layout"/>
+    <key attr.name="SUID" attr.type="long" for="edge" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="edge" id="shared name"/>
+    <key attr.name="shared interaction" attr.type="string" for="edge" id="shared interaction"/>
+    <key attr.name="name" attr.type="string" for="edge" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="edge" id="selected"/>
+    <key attr.name="interaction" attr.type="string" for="edge" id="interaction"/>
+    <key attr.name="SaintScore" attr.type="double" for="edge" id="SaintScore"/>
+    <key attr.name="MaxScore" attr.type="double" for="edge" id="MaxScore"/>
+    <key attr.name="favorable" attr.type="string" for="edge" id="favorable"/>
+    <key attr.name="unfavorable" attr.type="string" for="edge" id="unfavorable"/>
+    <key attr.name="Note" attr.type="string" for="edge" id="Note"/>
+    <key attr.name="SUID" attr.type="long" for="graph" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="graph" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="graph" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="graph" id="selected"/>
+    <key attr.name="__Annotations" attr.type="string" for="graph" id="__Annotations"/>
+    <graph edgedefault="directed" id="Network_Glycan_Bait">
+        <node id="248">
+            <data key="SUID">248</data>
+            <data key="shared name">EGFR</data>
+            <data key="name">EGFR</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">25</data>
+        </node>
+        <node id="244">
+            <data key="SUID">244</data>
+            <data key="shared name">BSG</data>
+            <data key="name">BSG</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">32</data>
+        </node>
+        <node id="242">
+            <data key="SUID">242</data>
+            <data key="shared name">CD44</data>
+            <data key="name">CD44</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">18</data>
+        </node>
+        <node id="238">
+            <data key="SUID">238</data>
+            <data key="shared name">SLC3A2</data>
+            <data key="name">SLC3A2</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">12</data>
+        </node>
+        <edge source="248" target="242">
+            <data key="SUID">1586</data>
+            <data key="shared name">EGFR (interacts with) CD44</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) CD44</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">56.02181</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="242">
+            <data key="SUID">1584</data>
+            <data key="shared name">BSG (interacts with) CD44</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) CD44</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">35.56576</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="248">
+            <data key="SUID">1582</data>
+            <data key="shared name">BSG (interacts with) EGFR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) EGFR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">97.68997</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="238">
+            <data key="SUID">1580</data>
+            <data key="shared name">BSG (interacts with) SLC3A2</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SLC3A2</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">43.3126</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+    </graph>
+</graphml>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="degree.layout" attr.type="int" for="node" id="degree.layout"/>
+    <key attr.name="SUID" attr.type="long" for="edge" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="edge" id="shared name"/>
+    <key attr.name="shared interaction" attr.type="string" for="edge" id="shared interaction"/>
+    <key attr.name="name" attr.type="string" for="edge" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="edge" id="selected"/>
+    <key attr.name="interaction" attr.type="string" for="edge" id="interaction"/>
+    <key attr.name="SaintScore" attr.type="double" for="edge" id="SaintScore"/>
+    <key attr.name="MaxScore" attr.type="double" for="edge" id="MaxScore"/>
+    <key attr.name="favorable" attr.type="string" for="edge" id="favorable"/>
+    <key attr.name="unfavorable" attr.type="string" for="edge" id="unfavorable"/>
+    <key attr.name="Note" attr.type="string" for="edge" id="Note"/>
+    <key attr.name="SUID" attr.type="long" for="graph" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="graph" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="graph" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="graph" id="selected"/>
+    <key attr.name="__Annotations" attr.type="string" for="graph" id="__Annotations"/>
+    <graph edgedefault="directed" id="Network_Glycan_SiaFuc">
+        <node id="248">
+            <data key="SUID">248</data>
+            <data key="shared name">EGFR</data>
+            <data key="name">EGFR</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">25</data>
+        </node>
+        <node id="244">
+            <data key="SUID">244</data>
+            <data key="shared name">BSG</data>
+            <data key="name">BSG</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">32</data>
+        </node>
+        <node id="242">
+            <data key="SUID">242</data>
+            <data key="shared name">CD44</data>
+            <data key="name">CD44</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">18</data>
+        </node>
+        <node id="238">
+            <data key="SUID">238</data>
+            <data key="shared name">SLC3A2</data>
+            <data key="name">SLC3A2</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">12</data>
+        </node>
+        <node id="606">
+            <data key="SUID">606</data>
+            <data key="shared name">ATP2B1</data>
+            <data key="name">ATP2B1</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">2</data>
+        </node>
+        <node id="593">
+            <data key="SUID">593</data>
+            <data key="shared name">CD58</data>
+            <data key="name">CD58</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">1</data>
+        </node>
+        <node id="588">
+            <data key="SUID">588</data>
+            <data key="shared name">COG3</data>
+            <data key="name">COG3</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">2</data>
+        </node>
+        <node id="224">
+            <data key="SUID">224</data>
+            <data key="shared name">GLG1</data>
+            <data key="name">GLG1</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">3</data>
+        </node>
+        <node id="214">
+            <data key="SUID">214</data>
+            <data key="shared name">LAMP1</data>
+            <data key="name">LAMP1</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">4</data>
+        </node>
+        <node id="204">
+            <data key="SUID">204</data>
+            <data key="shared name">SLC16A3</data>
+            <data key="name">SLC16A3</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">3</data>
+        </node>
+        <node id="486">
+            <data key="SUID">486</data>
+            <data key="shared name">SLC7A1</data>
+            <data key="name">SLC7A1</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">2</data>
+        </node>
+        <node id="188">
+            <data key="SUID">188</data>
+            <data key="shared name">SURF4</data>
+            <data key="name">SURF4</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">2</data>
+        </node>
+        <node id="469">
+            <data key="SUID">469</data>
+            <data key="shared name">SYMPK</data>
+            <data key="name">SYMPK</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">1</data>
+        </node>
+        <node id="452">
+            <data key="SUID">452</data>
+            <data key="shared name">VDAC1</data>
+            <data key="name">VDAC1</data>
+            <data key="selected">false</data>
+            <data key="degree.layout">3</data>
+        </node>
+        <edge source="248" target="606">
+            <data key="SUID">1237</data>
+            <data key="shared name">EGFR (interacts with) ATP2B1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) ATP2B1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">23.32952</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="248" target="242">
+            <data key="SUID">1235</data>
+            <data key="shared name">EGFR (interacts with) CD44</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) CD44</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">56.02181</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="248" target="588">
+            <data key="SUID">1233</data>
+            <data key="shared name">EGFR (interacts with) COG3</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) COG3</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">39.94686</data>
+            <data key="favorable">Multiple</data>
+            <data key="unfavorable">FS_neg</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="248" target="224">
+            <data key="SUID">1231</data>
+            <data key="shared name">EGFR (interacts with) GLG1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) GLG1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">41.17434</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="248" target="214">
+            <data key="SUID">1229</data>
+            <data key="shared name">EGFR (interacts with) LAMP1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) LAMP1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">15.25061</data>
+            <data key="favorable">Independent</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="248" target="486">
+            <data key="SUID">1227</data>
+            <data key="shared name">EGFR (interacts with) SLC7A1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) SLC7A1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">26.50122</data>
+            <data key="favorable">Multiple</data>
+            <data key="unfavorable">FS_neg</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="248" target="452">
+            <data key="SUID">1225</data>
+            <data key="shared name">EGFR (interacts with) VDAC1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">EGFR (interacts with) VDAC1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">59.16802</data>
+            <data key="favorable">Sia</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="606">
+            <data key="SUID">1223</data>
+            <data key="shared name">BSG (interacts with) ATP2B1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) ATP2B1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">24.59088</data>
+            <data key="favorable">Sia</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="242">
+            <data key="SUID">1221</data>
+            <data key="shared name">BSG (interacts with) CD44</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) CD44</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">35.56576</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="248">
+            <data key="SUID">1219</data>
+            <data key="shared name">BSG (interacts with) EGFR</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) EGFR</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">97.68997</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="224">
+            <data key="SUID">1217</data>
+            <data key="shared name">BSG (interacts with) GLG1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) GLG1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">31.21692</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="214">
+            <data key="SUID">1215</data>
+            <data key="shared name">BSG (interacts with) LAMP1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) LAMP1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">37.86738</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="204">
+            <data key="SUID">1213</data>
+            <data key="shared name">BSG (interacts with) SLC16A3</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SLC16A3</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">47.81414</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="238">
+            <data key="SUID">1211</data>
+            <data key="shared name">BSG (interacts with) SLC3A2</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SLC3A2</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">43.3126</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note">Bait</data>
+        </edge>
+        <edge source="244" target="486">
+            <data key="SUID">1209</data>
+            <data key="shared name">BSG (interacts with) SLC7A1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SLC7A1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">110.1359</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="188">
+            <data key="SUID">1207</data>
+            <data key="shared name">BSG (interacts with) SURF4</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SURF4</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">36.88771</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="469">
+            <data key="SUID">1205</data>
+            <data key="shared name">BSG (interacts with) SYMPK</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) SYMPK</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">69.05903</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="244" target="452">
+            <data key="SUID">1203</data>
+            <data key="shared name">BSG (interacts with) VDAC1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">BSG (interacts with) VDAC1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">101.5567</data>
+            <data key="favorable">Fuc</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="242" target="593">
+            <data key="SUID">1201</data>
+            <data key="shared name">CD44 (interacts with) CD58</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CD44 (interacts with) CD58</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">36.75671</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="242" target="224">
+            <data key="SUID">1199</data>
+            <data key="shared name">CD44 (interacts with) GLG1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CD44 (interacts with) GLG1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">62.78641</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="242" target="214">
+            <data key="SUID">1197</data>
+            <data key="shared name">CD44 (interacts with) LAMP1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CD44 (interacts with) LAMP1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">22.37484</data>
+            <data key="favorable">Multiple</data>
+            <data key="unfavorable">Sia_neg</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="242" target="204">
+            <data key="SUID">1195</data>
+            <data key="shared name">CD44 (interacts with) SLC16A3</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CD44 (interacts with) SLC16A3</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">35.58819</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="242" target="188">
+            <data key="SUID">1193</data>
+            <data key="shared name">CD44 (interacts with) SURF4</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">CD44 (interacts with) SURF4</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">32.15498</data>
+            <data key="favorable">HM</data>
+            <data key="unfavorable">Fuc_neg</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="238" target="588">
+            <data key="SUID">1191</data>
+            <data key="shared name">SLC3A2 (interacts with) COG3</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SLC3A2 (interacts with) COG3</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">25.52733</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="238" target="214">
+            <data key="SUID">1189</data>
+            <data key="shared name">SLC3A2 (interacts with) LAMP1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SLC3A2 (interacts with) LAMP1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">207.5895</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="238" target="204">
+            <data key="SUID">1187</data>
+            <data key="shared name">SLC3A2 (interacts with) SLC16A3</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SLC3A2 (interacts with) SLC16A3</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">50.95</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+        <edge source="238" target="452">
+            <data key="SUID">1185</data>
+            <data key="shared name">SLC3A2 (interacts with) VDAC1</data>
+            <data key="shared interaction">interacts with</data>
+            <data key="name">SLC3A2 (interacts with) VDAC1</data>
+            <data key="selected">false</data>
+            <data key="interaction">interacts with</data>
+            <data key="SaintScore">1.0</data>
+            <data key="MaxScore">149.0002</data>
+            <data key="favorable">FS</data>
+            <data key="unfavorable">None</data>
+            <data key="Note"/>
+        </edge>
+    </graph>
+</graphml>

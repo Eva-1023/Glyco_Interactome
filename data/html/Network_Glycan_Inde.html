@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ff0000", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "star", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "234", "label": "ATP2A2", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "604", "label": "ATP5F1A", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "602", "label": "ATP5F1B", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "597", "label": "ATXN10", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "595", "label": "CCT3", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "566", "label": "ESYT2", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "222", "label": "HAX1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "551", "label": "HSPB1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "214", "label": "LAMP1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "536", "label": "LPCAT1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "524", "label": "PGRMC1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "208", "label": "PHB1", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "513", "label": "RPN2", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "200", "label": "SLC25A4", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "491", "label": "SLC25A5", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "196", "label": "SLC7A5", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "462", "label": "TMED10", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "182", "label": "TUFM", "shape": "dot", "size": 15}]);
+                  edges = new vis.DataSet([{"from": "248", "title": "SUID: 1547\u003cbr\u003eshared name: EGFR (interacts with) ATP2A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ATP2A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 44.38\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "234"}, {"from": "248", "title": "SUID: 1545\u003cbr\u003eshared name: EGFR (interacts with) ATP5F1A\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ATP5F1A\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 10.14874\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "604"}, {"from": "248", "title": "SUID: 1543\u003cbr\u003eshared name: EGFR (interacts with) ATP5F1B\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ATP5F1B\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 8.741943\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "602"}, {"from": "248", "title": "SUID: 1541\u003cbr\u003eshared name: EGFR (interacts with) ATXN10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ATXN10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 12.87121\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "597"}, {"from": "248", "title": "SUID: 1539\u003cbr\u003eshared name: EGFR (interacts with) CCT3\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) CCT3\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.997\u003cbr\u003eMaxScore: 33.1712\u003cbr\u003efavorable: Sia\u003cbr\u003eunfavorable: None", "to": "595"}, {"from": "248", "title": "SUID: 1537\u003cbr\u003eshared name: EGFR (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 56.02181\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "248", "title": "SUID: 1535\u003cbr\u003eshared name: EGFR (interacts with) HAX1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) HAX1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 44.49159\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "222"}, {"from": "248", "title": "SUID: 1533\u003cbr\u003eshared name: EGFR (interacts with) HSPB1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) HSPB1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.96\u003cbr\u003eMaxScore: 14.01268\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "551"}, {"from": "248", "title": "SUID: 1531\u003cbr\u003eshared name: EGFR (interacts with) LAMP1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) LAMP1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 15.25061\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "214"}, {"from": "248", "title": "SUID: 1529\u003cbr\u003eshared name: EGFR (interacts with) PGRMC1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) PGRMC1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 17.65448\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "524"}, {"from": "248", "title": "SUID: 1527\u003cbr\u003eshared name: EGFR (interacts with) PHB1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) PHB1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 13.39631\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "208"}, {"from": "248", "title": "SUID: 1525\u003cbr\u003eshared name: EGFR (interacts with) SLC25A4\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) SLC25A4\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 13.29753\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "200"}, {"from": "248", "title": "SUID: 1523\u003cbr\u003eshared name: EGFR (interacts with) SLC25A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) SLC25A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 7.673967\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "491"}, {"from": "248", "title": "SUID: 1521\u003cbr\u003eshared name: EGFR (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 45.15472\u003cbr\u003efavorable: Fuc\u003cbr\u003eunfavorable: None", "to": "196"}, {"from": "248", "title": "SUID: 1519\u003cbr\u003eshared name: EGFR (interacts with) TMED10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) TMED10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 42.86022\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "462"}, {"from": "244", "title": "SUID: 1517\u003cbr\u003eshared name: BSG (interacts with) ATP2A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ATP2A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 19.64798\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "234"}, {"from": "244", "title": "SUID: 1515\u003cbr\u003eshared name: BSG (interacts with) ATP5F1A\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ATP5F1A\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 16.57576\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "604"}, {"from": "244", "title": "SUID: 1513\u003cbr\u003eshared name: BSG (interacts with) ATP5F1B\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ATP5F1B\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 15.21497\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "602"}, {"from": "244", "title": "SUID: 1511\u003cbr\u003eshared name: BSG (interacts with) ATXN10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ATXN10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 51.35567\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "597"}, {"from": "244", "title": "SUID: 1509\u003cbr\u003eshared name: BSG (interacts with) CCT3\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CCT3\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.997\u003cbr\u003eMaxScore: 20.12877\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "595"}, {"from": "244", "title": "SUID: 1507\u003cbr\u003eshared name: BSG (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 35.56576\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "244", "title": "SUID: 1505\u003cbr\u003eshared name: BSG (interacts with) EGFR\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) EGFR\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 97.68997\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "248"}, {"from": "244", "title": "SUID: 1503\u003cbr\u003eshared name: BSG (interacts with) ESYT2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ESYT2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.918\u003cbr\u003eMaxScore: 12.38401\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "566"}, {"from": "244", "title": "SUID: 1501\u003cbr\u003eshared name: BSG (interacts with) HAX1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) HAX1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 18.70035\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "222"}, {"from": "244", "title": "SUID: 1499\u003cbr\u003eshared name: BSG (interacts with) LAMP1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) LAMP1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 37.86738\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "214"}, {"from": "244", "title": "SUID: 1497\u003cbr\u003eshared name: BSG (interacts with) LPCAT1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) LPCAT1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.999\u003cbr\u003eMaxScore: 19.01167\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "536"}, {"from": "244", "title": "SUID: 1495\u003cbr\u003eshared name: BSG (interacts with) PHB1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) PHB1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 13.8361\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "208"}, {"from": "244", "title": "SUID: 1493\u003cbr\u003eshared name: BSG (interacts with) RPN2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) RPN2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 16.62625\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "513"}, {"from": "244", "title": "SUID: 1491\u003cbr\u003eshared name: BSG (interacts with) SLC25A4\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC25A4\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 29.2665\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "200"}, {"from": "244", "title": "SUID: 1489\u003cbr\u003eshared name: BSG (interacts with) SLC25A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC25A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 31.44333\u003cbr\u003efavorable: Multiple\u003cbr\u003eunfavorable: Sia_neg", "to": "491"}, {"from": "244", "title": "SUID: 1487\u003cbr\u003eshared name: BSG (interacts with) SLC3A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC3A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 43.3126\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "238"}, {"from": "244", "title": "SUID: 1485\u003cbr\u003eshared name: BSG (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 17.62607\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "196"}, {"from": "244", "title": "SUID: 1483\u003cbr\u003eshared name: BSG (interacts with) TMED10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) TMED10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 5.307938\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "462"}, {"from": "244", "title": "SUID: 1481\u003cbr\u003eshared name: BSG (interacts with) TUFM\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) TUFM\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 12.38516\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "182"}, {"from": "242", "title": "SUID: 1479\u003cbr\u003eshared name: CD44 (interacts with) LAMP1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: CD44 (interacts with) LAMP1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 22.37484\u003cbr\u003efavorable: Multiple\u003cbr\u003eunfavorable: Sia_neg", "to": "214"}, {"from": "242", "title": "SUID: 1477\u003cbr\u003eshared name: CD44 (interacts with) TUFM\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: CD44 (interacts with) TUFM\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 32.35887\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: Sia_neg", "to": "182"}, {"from": "238", "title": "SUID: 1475\u003cbr\u003eshared name: SLC3A2 (interacts with) ATP2A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) ATP2A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 7.767988\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "234"}, {"from": "238", "title": "SUID: 1473\u003cbr\u003eshared name: SLC3A2 (interacts with) LAMP1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) LAMP1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 207.5895\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None", "to": "214"}, {"from": "238", "title": "SUID: 1471\u003cbr\u003eshared name: SLC3A2 (interacts with) PHB1\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) PHB1\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 37.58784\u003cbr\u003efavorable: Multiple\u003cbr\u003eunfavorable: Fuc_neg", "to": "208"}, {"from": "238", "title": "SUID: 1469\u003cbr\u003eshared name: SLC3A2 (interacts with) SLC25A4\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) SLC25A4\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 10.32338\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "200"}, {"from": "238", "title": "SUID: 1467\u003cbr\u003eshared name: SLC3A2 (interacts with) SLC25A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) SLC25A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 9.7454\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "491"}, {"from": "238", "title": "SUID: 1465\u003cbr\u003eshared name: SLC3A2 (interacts with) SLC7A5\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) SLC7A5\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 66.66482\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "196"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 14, "face": "arial", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": true}, "physics": {"barnesHut": {"gravitationalConstant": -80000, "centralGravity": 0.3, "springLength": 95, "springConstant": 0.04, "damping": 0.09, "avoidOverlap": 0}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
