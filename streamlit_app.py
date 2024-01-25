@@ -29,9 +29,10 @@ def main():
     source_code = HtmlFile.read()
     components.html(source_code, height=1600, width=1000)
 
-    # Add a "Contact" tab to the sidebar
-    if st.sidebar.button('Contact'):
-        contact_tab()
+    # Add a "Contact" button to open in a new tab
+    contact_link = '<a href="#" target="_blank">Contact</a>'
+    if st.sidebar.button(contact_link, on_click=contact_tab):
+        pass  # You can perform an action here if needed
 
 if __name__ == "__main__":
     main()
