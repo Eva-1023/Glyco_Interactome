@@ -23,14 +23,14 @@ for filename in os.listdir(path):
     if filename.endswith(".html"):
         graph_set.add(filename.replace('.html',''))
 option=st.sidebar.selectbox('select graph',(graph_set))
-physics=st.sidebar.checkbox('add physics interactivity?')
-got.simple_func(physics)
+
+
 
 
 
 HtmlFile = open(path+option+'.html', 'r', encoding='utf-8')
 source_code = HtmlFile.read() 
-components.html(source_code, height = 900,width=900)
+components.html(source_code)
 
 
 
