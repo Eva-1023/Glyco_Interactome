@@ -26,11 +26,13 @@ def network_page():
     
     title_occurrences = re.findall(r'"title": "([^"]+)"', edges_row)
     
-    clicked_edge = st.sidebar.selectbox("Select an Edge:", title_occurrences)
+    st.title('Boxplot')
+    clicked_edge = st.sidebar.selectbox("Select an Interactome:", title_occurrences)
     if clicked_edge:
         edge_name = clicked_edge
         figure_filename = os.path.join('data/boxplot/', edge_name + ".png")  # Adjust the filename as needed
-        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}")
+        # set size of the figure
+        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}",height=400, width=500)
     
 
 
