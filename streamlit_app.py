@@ -19,6 +19,7 @@ def network_page():
     source_code = HtmlFile.read()
     st.components.v1.html(source_code, height=800, width=1000)
     st.sidebar.title("Figure")
+    st.title('Boxplot')
     figure = st.empty()
     # get the row from source_code that contains "edges = new vis.DataSet"
     edges_row = [row for row in source_code.splitlines() if "edges = new vis.DataSet" in row][0]
@@ -26,13 +27,12 @@ def network_page():
     
     title_occurrences = re.findall(r'"title": "([^"]+)"', edges_row)
     
-    st.title('Boxplot')
     clicked_edge = st.sidebar.selectbox("Select an Interactome:", title_occurrences)
     if clicked_edge:
         edge_name = clicked_edge
         figure_filename = os.path.join('data/boxplot/', edge_name + ".png")  # Adjust the filename as needed
         # set size of the figure
-        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}",width=500)
+        figure.image(figure_filename, use_column_width=True, caption=f"Abundance for Edge: {edge_name}",width=200)
     
 
 
