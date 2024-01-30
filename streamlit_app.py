@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import re 
 
 # Define a function to display the network visualization
 def network_page():
@@ -16,7 +17,22 @@ def network_page():
 
     HtmlFile = open(path + option + '.html', 'r', encoding='utf-8')
     source_code = HtmlFile.read()
-    st.components.v1.html(source_code, height=1600, width=1000)
+    st.components.v1.html(source_code, height=800, width=1000)
+    st.sidebar.title("Figure")
+    figure = st.empty()
+    # get the row from source_code that contains "edges = new vis.DataSet"
+    edges_row = [row for row in source_code.splitlines() if "edges = new vis.DataSet" in row][0]
+    
+    
+    title_occurrences = re.findall(r'"title": "([^"]+)"', edges_row)
+    
+    clicked_edge = st.sidebar.selectbox("Select an Edge:", title_occurrences)
+    if clicked_edge:
+        edge_name = clicked_edge
+        figure_filename = os.path.join('data/boxplot/', edge_name + ".png")  # Adjust the filename as needed
+        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}")
+    
+
 
 # Define a function to display the Home page content
 def home_page():
