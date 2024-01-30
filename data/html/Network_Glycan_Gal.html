@@ -43,12 +43,6 @@
              
 
              
-             #config {
-                 float: left;
-                 width: 400px;
-                 height: 600px;
-             }
-             
 
              
         </style>
@@ -63,8 +57,6 @@
         </div>
 
         
-        
-            <div id="config"></div>
         
 
         <script type="text/javascript">
@@ -97,7 +89,7 @@
 
                   // parsing and collecting nodes and edges from the python
                   nodes = new vis.DataSet([{"color": "#ff0000", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "star", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "597", "label": "ATXN10", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "538", "label": "LGALS3", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "462", "label": "TMED10", "shape": "dot", "size": 15}, {"color": "#97c2fc", "font": {"size": 14}, "id": "184", "label": "TNFRSF10B", "shape": "dot", "size": 15}]);
-                  edges = new vis.DataSet([{"from": "248", "title": "SUID: 1300\u003cbr\u003eshared name: EGFR (interacts with) ATXN10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) ATXN10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 12.87121\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "597"}, {"from": "248", "title": "SUID: 1298\u003cbr\u003eshared name: EGFR (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 56.02181\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "248", "title": "SUID: 1296\u003cbr\u003eshared name: EGFR (interacts with) TMED10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) TMED10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 42.86022\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "462"}, {"from": "248", "title": "SUID: 1294\u003cbr\u003eshared name: EGFR (interacts with) TNFRSF10B\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) TNFRSF10B\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.996\u003cbr\u003eMaxScore: 83.96258\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None", "to": "184"}, {"from": "244", "title": "SUID: 1292\u003cbr\u003eshared name: BSG (interacts with) ATXN10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) ATXN10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 51.35567\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "597"}, {"from": "244", "title": "SUID: 1290\u003cbr\u003eshared name: BSG (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 35.56576\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "244", "title": "SUID: 1288\u003cbr\u003eshared name: BSG (interacts with) EGFR\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) EGFR\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 97.68997\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "248"}, {"from": "244", "title": "SUID: 1286\u003cbr\u003eshared name: BSG (interacts with) LGALS3\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) LGALS3\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 43.67779\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "538"}, {"from": "244", "title": "SUID: 1284\u003cbr\u003eshared name: BSG (interacts with) SLC3A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC3A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 43.3126\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "238"}, {"from": "244", "title": "SUID: 1282\u003cbr\u003eshared name: BSG (interacts with) TMED10\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) TMED10\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 5.307938\u003cbr\u003efavorable: Independent\u003cbr\u003eunfavorable: None", "to": "462"}, {"from": "238", "title": "SUID: 1280\u003cbr\u003eshared name: SLC3A2 (interacts with) TNFRSF10B\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: SLC3A2 (interacts with) TNFRSF10B\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 0.996\u003cbr\u003eMaxScore: 55.79694\u003cbr\u003efavorable: Gal\u003cbr\u003eunfavorable: None", "to": "184"}]);
+                  edges = new vis.DataSet([{"from": "248", "title": "EGFR_ATXN10", "to": "597"}, {"from": "248", "title": "EGFR_CD44", "to": "242"}, {"from": "248", "title": "EGFR_TMED10", "to": "462"}, {"from": "248", "title": "EGFR_TNFRSF10B", "to": "184"}, {"from": "244", "title": "BSG_ATXN10", "to": "597"}, {"from": "244", "title": "BSG_CD44", "to": "242"}, {"from": "244", "title": "BSG_EGFR", "to": "248"}, {"from": "244", "title": "BSG_LGALS3", "to": "538"}, {"from": "244", "title": "BSG_SLC3A2", "to": "238"}, {"from": "244", "title": "BSG_TMED10", "to": "462"}, {"from": "238", "title": "SLC3A2_TNFRSF10B", "to": "184"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -110,10 +102,7 @@
 
                   var options = {
     "configure": {
-        "enabled": true,
-        "filter": [
-            "physics"
-        ]
+        "enabled": false
     },
     "edges": {
         "color": {
@@ -144,10 +133,6 @@
                   
 
 
-                  
-                  // if this network requires displaying the configure window,
-                  // put it in its div
-                  options.configure["container"] = document.getElementById("config");
                   
 
                   network = new vis.Network(container, data, options);

@@ -43,12 +43,6 @@
              
 
              
-             #config {
-                 float: left;
-                 width: 400px;
-                 height: 600px;
-             }
-             
 
              
         </style>
@@ -63,8 +57,6 @@
         </div>
 
         
-        
-            <div id="config"></div>
         
 
         <script type="text/javascript">
@@ -97,7 +89,7 @@
 
                   // parsing and collecting nodes and edges from the python
                   nodes = new vis.DataSet([{"color": "#ff0000", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "star", "size": 15}]);
-                  edges = new vis.DataSet([{"from": "248", "title": "SUID: 1586\u003cbr\u003eshared name: EGFR (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: EGFR (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 56.02181\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "244", "title": "SUID: 1584\u003cbr\u003eshared name: BSG (interacts with) CD44\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) CD44\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 35.56576\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "242"}, {"from": "244", "title": "SUID: 1582\u003cbr\u003eshared name: BSG (interacts with) EGFR\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) EGFR\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 97.68997\u003cbr\u003efavorable: FS\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "248"}, {"from": "244", "title": "SUID: 1580\u003cbr\u003eshared name: BSG (interacts with) SLC3A2\u003cbr\u003eshared interaction: interacts with\u003cbr\u003ename: BSG (interacts with) SLC3A2\u003cbr\u003eselected: False\u003cbr\u003einteraction: interacts with\u003cbr\u003eSaintScore: 1.0\u003cbr\u003eMaxScore: 43.3126\u003cbr\u003efavorable: HM\u003cbr\u003eunfavorable: None\u003cbr\u003eNote: Bait", "to": "238"}]);
+                  edges = new vis.DataSet([{"from": "248", "title": "EGFR_CD44", "to": "242"}, {"from": "244", "title": "BSG_CD44", "to": "242"}, {"from": "244", "title": "BSG_EGFR", "to": "248"}, {"from": "244", "title": "BSG_SLC3A2", "to": "238"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -110,10 +102,7 @@
 
                   var options = {
     "configure": {
-        "enabled": true,
-        "filter": [
-            "physics"
-        ]
+        "enabled": false
     },
     "edges": {
         "color": {
@@ -144,10 +133,6 @@
                   
 
 
-                  
-                  // if this network requires displaying the configure window,
-                  // put it in its div
-                  options.configure["container"] = document.getElementById("config");
                   
 
                   network = new vis.Network(container, data, options);

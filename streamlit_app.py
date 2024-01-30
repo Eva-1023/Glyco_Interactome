@@ -1,12 +1,8 @@
 import streamlit as st
-import networkx as nx
-import matplotlib.pyplot as plt
-from pyvis.network import Network
-import got
 import os
 
 # Define a function to display the network visualization
-def display_network():
+def network_page():
     st.title('Glyco Interactome Network')
 
     # Add your existing code for the network visualization here
@@ -22,20 +18,35 @@ def display_network():
     source_code = HtmlFile.read()
     st.components.v1.html(source_code, height=1600, width=1000)
 
-# Define a function to display the "Contact" tab content
-def contact_tab():
+# Define a function to display the Home page content
+def home_page():
+    st.title('Home')
+    st.write('This is the home page content.')
+
+# Define a function to display the Contact page content
+def contact_page():
     st.title('Contact Us')
     st.write("You can reach out to us at contact@example.com")
 
-# Define the main app
+# Define the main app layout
 def main():
-    st.sidebar.title('Navigation')
-    app_mode = st.sidebar.radio("Go to", ('Network Graph', 'Contact'))
+    st.set_page_config(
+        page_title="Myco Interactome Network",
+        page_icon="🌐",
+        layout="wide",
+    )
 
-    if app_mode == 'Network Graph':
-        display_network()
-    elif app_mode == 'Contact':
-        contact_tab()
+    # Navigation
+    st.sidebar.title("Navigation")
+    selection = st.sidebar.radio("Go to", ["Home", "Network", "Contact"])
+
+    # Page Display
+    if selection == "Home":
+        home_page()
+    elif selection == "Network":
+        network_page()
+    elif selection == "Contact":
+        contact_page()
 
 if __name__ == "__main__":
     main()
