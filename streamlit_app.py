@@ -32,7 +32,7 @@ def network_page():
         edge_name = clicked_edge
         figure_filename = os.path.join('data/boxplot/', edge_name + ".png")  # Adjust the filename as needed
         # set size of the figure
-        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}",height=400, width=500)
+        figure.image(figure_filename, use_column_width=True, caption=f"Figure for Edge: {edge_name}",width=500)
     
 
 
