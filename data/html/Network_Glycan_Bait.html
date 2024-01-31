@@ -88,7 +88,7 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#ff0000", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "star", "size": 15}, {"color": "#ff0000", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "star", "size": 15}]);
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"size": 14}, "id": "248", "label": "EGFR", "shape": "diamond", "size": 20}, {"color": "#97c2fc", "font": {"size": 14}, "id": "244", "label": "BSG", "shape": "diamond", "size": 20}, {"color": "#97c2fc", "font": {"size": 14}, "id": "242", "label": "CD44", "shape": "diamond", "size": 20}, {"color": "#97c2fc", "font": {"size": 14}, "id": "238", "label": "SLC3A2", "shape": "diamond", "size": 20}]);
                   edges = new vis.DataSet([{"from": "248", "title": "EGFR_CD44", "to": "242"}, {"from": "244", "title": "BSG_CD44", "to": "242"}, {"from": "244", "title": "BSG_EGFR", "to": "248"}, {"from": "244", "title": "BSG_SLC3A2", "to": "238"}]);
 
                   nodeColors = {};
