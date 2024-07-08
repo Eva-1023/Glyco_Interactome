@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ADAM9" />
+    <node id="CPT1A" />
+    <node id="LGALS3" />
+    <node id="CD44" />
+    <node id="EPCAM" />
+    <node id="ITGB1" />
+    <node id="NDUFS1" />
+    <node id="PFKP" />
+    <node id="S100A8" />
+    <node id="S100A9" />
+    <node id="SRC" />
+    <node id="TUFM" />
+    <node id="EGFR" />
+    <node id="AP1M1" />
+    <node id="ARF4" />
+    <node id="ATP5F1A" />
+    <node id="COG3" />
+    <node id="COPB1" />
+    <node id="HM13" />
+    <node id="MAP2K2" />
+    <node id="NAMPT" />
+    <node id="PHB1" />
+    <node id="SLC25A11" />
+    <node id="SLC25A3" />
+    <node id="SLC26A6" />
+    <node id="SLC7A1" />
+    <node id="TGM1" />
+    <node id="XP32" />
+    <node id="SLC3A2" />
+    <node id="CDCP1" />
+    <node id="SLC25A4" />
+    <node id="TNFRSF10B" />
+    <edge source="BSG" target="ADAM9" />
+    <edge source="BSG" target="CPT1A" />
+    <edge source="BSG" target="LGALS3" />
+    <edge source="CD44" target="EPCAM" />
+    <edge source="CD44" target="ITGB1" />
+    <edge source="CD44" target="NDUFS1" />
+    <edge source="CD44" target="PFKP" />
+    <edge source="CD44" target="S100A8" />
+    <edge source="CD44" target="S100A9" />
+    <edge source="CD44" target="SRC" />
+    <edge source="CD44" target="TUFM" />
+    <edge source="EPCAM" target="EGFR" />
+    <edge source="EPCAM" target="SLC3A2" />
+    <edge source="NDUFS1" target="EGFR" />
+    <edge source="PFKP" target="EGFR" />
+    <edge source="S100A9" target="EGFR" />
+    <edge source="EGFR" target="AP1M1" />
+    <edge source="EGFR" target="ARF4" />
+    <edge source="EGFR" target="ATP5F1A" />
+    <edge source="EGFR" target="COG3" />
+    <edge source="EGFR" target="COPB1" />
+    <edge source="EGFR" target="HM13" />
+    <edge source="EGFR" target="MAP2K2" />
+    <edge source="EGFR" target="NAMPT" />
+    <edge source="EGFR" target="PHB1" />
+    <edge source="EGFR" target="SLC25A11" />
+    <edge source="EGFR" target="SLC25A3" />
+    <edge source="EGFR" target="SLC26A6" />
+    <edge source="EGFR" target="SLC7A1" />
+    <edge source="EGFR" target="TGM1" />
+    <edge source="EGFR" target="XP32" />
+    <edge source="SLC3A2" target="CDCP1" />
+    <edge source="SLC3A2" target="SLC25A4" />
+    <edge source="SLC3A2" target="TNFRSF10B" />
+  </graph>
+</graphml>

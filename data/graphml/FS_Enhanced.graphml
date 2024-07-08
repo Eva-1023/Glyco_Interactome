@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ATP5F1B" />
+    <node id="ATXN10" />
+    <node id="EGFR" />
+    <node id="EPCAM" />
+    <node id="LGALS3" />
+    <node id="SLC7A1" />
+    <node id="SLC7A5" />
+    <node id="STEAP3" />
+    <node id="SYMPK" />
+    <node id="CD44" />
+    <node id="ALDH1A3" />
+    <node id="CD58" />
+    <node id="SLC39A3" />
+    <node id="ARF6" />
+    <node id="ATP2B1" />
+    <node id="CSTA" />
+    <node id="GLG1" />
+    <node id="PGRMC1" />
+    <node id="S100A9" />
+    <node id="VDAC1" />
+    <node id="SLC3A2" />
+    <node id="COG3" />
+    <node id="EHD4" />
+    <node id="LAMP1" />
+    <node id="SLC16A3" />
+    <node id="TNFRSF10B" />
+    <edge source="BSG" target="ATP5F1B" />
+    <edge source="BSG" target="ATXN10" />
+    <edge source="BSG" target="EGFR" />
+    <edge source="BSG" target="EPCAM" />
+    <edge source="BSG" target="LGALS3" />
+    <edge source="BSG" target="SLC7A1" />
+    <edge source="BSG" target="SLC7A5" />
+    <edge source="BSG" target="STEAP3" />
+    <edge source="BSG" target="SYMPK" />
+    <edge source="EGFR" target="ARF6" />
+    <edge source="EGFR" target="ATP2B1" />
+    <edge source="EGFR" target="CSTA" />
+    <edge source="EGFR" target="GLG1" />
+    <edge source="EGFR" target="PGRMC1" />
+    <edge source="EGFR" target="S100A9" />
+    <edge source="EGFR" target="VDAC1" />
+    <edge source="CD44" target="ALDH1A3" />
+    <edge source="CD44" target="CD58" />
+    <edge source="CD44" target="SLC39A3" />
+    <edge source="VDAC1" target="SLC3A2" />
+    <edge source="SLC3A2" target="COG3" />
+    <edge source="SLC3A2" target="EHD4" />
+    <edge source="SLC3A2" target="LAMP1" />
+    <edge source="SLC3A2" target="SLC16A3" />
+    <edge source="SLC3A2" target="TNFRSF10B" />
+  </graph>
+</graphml>

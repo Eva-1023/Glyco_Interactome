@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ARF6" />
+    <node id="CD44" />
+    <node id="DDOST" />
+    <node id="EGFR" />
+    <node id="EPCAM" />
+    <node id="GLG1" />
+    <node id="SACM1L" />
+    <node id="SAMHD1" />
+    <node id="SLC25A11" />
+    <node id="SLC7A1" />
+    <node id="SURF4" />
+    <node id="SYMPK" />
+    <node id="VDAC1" />
+    <node id="ITGA6" />
+    <node id="PLAUR" />
+    <node id="SLC39A3" />
+    <node id="ARF5" />
+    <node id="TMED10" />
+    <node id="SLC3A2" />
+    <node id="EHD4" />
+    <node id="SLC16A3" />
+    <edge source="BSG" target="ARF6" />
+    <edge source="BSG" target="CD44" />
+    <edge source="BSG" target="DDOST" />
+    <edge source="BSG" target="EGFR" />
+    <edge source="BSG" target="EPCAM" />
+    <edge source="BSG" target="GLG1" />
+    <edge source="BSG" target="SACM1L" />
+    <edge source="BSG" target="SAMHD1" />
+    <edge source="BSG" target="SLC25A11" />
+    <edge source="BSG" target="SLC7A1" />
+    <edge source="BSG" target="SURF4" />
+    <edge source="BSG" target="SYMPK" />
+    <edge source="BSG" target="VDAC1" />
+    <edge source="CD44" target="ITGA6" />
+    <edge source="CD44" target="PLAUR" />
+    <edge source="CD44" target="SLC39A3" />
+    <edge source="EGFR" target="ARF5" />
+    <edge source="EGFR" target="GLG1" />
+    <edge source="EGFR" target="TMED10" />
+    <edge source="EGFR" target="VDAC1" />
+    <edge source="VDAC1" target="SLC3A2" />
+    <edge source="SLC3A2" target="EHD4" />
+    <edge source="SLC3A2" target="SLC16A3" />
+  </graph>
+</graphml>
