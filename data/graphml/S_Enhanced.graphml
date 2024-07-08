@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ARF6" />
+    <node id="ATP2A2" />
+    <node id="ATP2B1" />
+    <node id="EGFR" />
+    <node id="EHD4" />
+    <node id="EPCAM" />
+    <node id="GLG1" />
+    <node id="LGALS3" />
+    <node id="NAMPT" />
+    <node id="SYMPK" />
+    <node id="TMED10" />
+    <node id="CD44" />
+    <node id="ITGA6" />
+    <node id="SLC16A3" />
+    <node id="SLC39A3" />
+    <node id="ARF5" />
+    <node id="ATP5F1A" />
+    <node id="CCT3" />
+    <node id="CDCP1" />
+    <node id="CPT1A" />
+    <node id="CSTA" />
+    <node id="DDOST" />
+    <node id="SLC25A5" />
+    <node id="VDAC1" />
+    <node id="XP32" />
+    <node id="SLC3A2" />
+    <edge source="BSG" target="ARF6" />
+    <edge source="BSG" target="ATP2A2" />
+    <edge source="BSG" target="ATP2B1" />
+    <edge source="BSG" target="EGFR" />
+    <edge source="BSG" target="EHD4" />
+    <edge source="BSG" target="EPCAM" />
+    <edge source="BSG" target="GLG1" />
+    <edge source="BSG" target="LGALS3" />
+    <edge source="BSG" target="NAMPT" />
+    <edge source="BSG" target="SYMPK" />
+    <edge source="BSG" target="TMED10" />
+    <edge source="EGFR" target="ARF5" />
+    <edge source="EGFR" target="ATP5F1A" />
+    <edge source="EGFR" target="CCT3" />
+    <edge source="EGFR" target="CDCP1" />
+    <edge source="EGFR" target="CPT1A" />
+    <edge source="EGFR" target="CSTA" />
+    <edge source="EGFR" target="DDOST" />
+    <edge source="EGFR" target="GLG1" />
+    <edge source="EGFR" target="SLC25A5" />
+    <edge source="EGFR" target="TMED10" />
+    <edge source="EGFR" target="VDAC1" />
+    <edge source="EGFR" target="XP32" />
+    <edge source="EHD4" target="SLC3A2" />
+    <edge source="CD44" target="ITGA6" />
+    <edge source="CD44" target="SLC16A3" />
+    <edge source="CD44" target="SLC39A3" />
+    <edge source="SLC16A3" target="SLC3A2" />
+    <edge source="CDCP1" target="SLC3A2" />
+    <edge source="VDAC1" target="SLC3A2" />
+  </graph>
+</graphml>

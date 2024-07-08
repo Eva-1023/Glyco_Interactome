@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ATXN10" />
+    <node id="CD44" />
+    <node id="CPNE1" />
+    <node id="CSE1L" />
+    <node id="GOLM2" />
+    <node id="LGALS3" />
+    <node id="SACM1L" />
+    <node id="VDAC1" />
+    <node id="ARF5" />
+    <node id="ARF6" />
+    <node id="EHD4" />
+    <node id="PLAUR" />
+    <node id="RAP2C" />
+    <node id="SPINT2" />
+    <node id="TUFM" />
+    <node id="EGFR" />
+    <node id="AP1M1" />
+    <node id="NDUFS1" />
+    <node id="TMED10" />
+    <node id="SLC3A2" />
+    <node id="COG3" />
+    <node id="SLC16A3" />
+    <edge source="BSG" target="ATXN10" />
+    <edge source="BSG" target="CD44" />
+    <edge source="BSG" target="CPNE1" />
+    <edge source="BSG" target="CSE1L" />
+    <edge source="BSG" target="GOLM2" />
+    <edge source="BSG" target="LGALS3" />
+    <edge source="BSG" target="SACM1L" />
+    <edge source="BSG" target="VDAC1" />
+    <edge source="CD44" target="ARF5" />
+    <edge source="CD44" target="ARF6" />
+    <edge source="CD44" target="EHD4" />
+    <edge source="CD44" target="PLAUR" />
+    <edge source="CD44" target="RAP2C" />
+    <edge source="CD44" target="SPINT2" />
+    <edge source="CD44" target="TUFM" />
+    <edge source="EGFR" target="AP1M1" />
+    <edge source="EGFR" target="NDUFS1" />
+    <edge source="EGFR" target="TMED10" />
+    <edge source="SLC3A2" target="COG3" />
+    <edge source="SLC3A2" target="SLC16A3" />
+  </graph>
+</graphml>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ARF5" />
+    <node id="ATP5F1A" />
+    <node id="ATP5PO" />
+    <node id="ATP6V1H" />
+    <node id="CCT3" />
+    <node id="ESYT2" />
+    <node id="HAX1" />
+    <node id="LPCAT1" />
+    <node id="PHB1" />
+    <node id="SLC26A6" />
+    <node id="SLC3A2" />
+    <node id="TUFM" />
+    <node id="CD44" />
+    <node id="CDCP1" />
+    <node id="EGFR" />
+    <node id="ADAM9" />
+    <node id="ATP1A1" />
+    <node id="ATP5F1B" />
+    <node id="ATXN10" />
+    <node id="EHD4" />
+    <node id="GNA11" />
+    <node id="LAMP1" />
+    <node id="SLC25A4" />
+    <node id="SLC7A5" />
+    <node id="ATP2A2" />
+    <node id="ITGB1" />
+    <node id="SLC25A5" />
+    <edge source="BSG" target="ARF5" />
+    <edge source="BSG" target="ATP5F1A" />
+    <edge source="BSG" target="ATP5PO" />
+    <edge source="BSG" target="ATP6V1H" />
+    <edge source="BSG" target="CCT3" />
+    <edge source="BSG" target="ESYT2" />
+    <edge source="BSG" target="HAX1" />
+    <edge source="BSG" target="LPCAT1" />
+    <edge source="BSG" target="PHB1" />
+    <edge source="BSG" target="SLC26A6" />
+    <edge source="BSG" target="SLC3A2" />
+    <edge source="BSG" target="TUFM" />
+    <edge source="SLC3A2" target="ATP1A1" />
+    <edge source="SLC3A2" target="ATP2A2" />
+    <edge source="SLC3A2" target="ITGB1" />
+    <edge source="SLC3A2" target="SLC25A5" />
+    <edge source="CD44" target="CDCP1" />
+    <edge source="EGFR" target="ADAM9" />
+    <edge source="EGFR" target="ATP1A1" />
+    <edge source="EGFR" target="ATP5F1B" />
+    <edge source="EGFR" target="ATXN10" />
+    <edge source="EGFR" target="EHD4" />
+    <edge source="EGFR" target="GNA11" />
+    <edge source="EGFR" target="LAMP1" />
+    <edge source="EGFR" target="SLC25A4" />
+    <edge source="EGFR" target="SLC7A5" />
+  </graph>
+</graphml>

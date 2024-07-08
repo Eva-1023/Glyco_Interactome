@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="SACM1L" />
+    <node id="CD44" />
+    <node id="ALDH1A3" />
+    <node id="NDUFS1" />
+    <node id="S100A8" />
+    <node id="S100A9" />
+    <node id="SPINT2" />
+    <node id="EGFR" />
+    <node id="AP1M1" />
+    <node id="ARF6" />
+    <node id="ATP2B1" />
+    <node id="HM13" />
+    <node id="MAP2K2" />
+    <node id="SLC26A6" />
+    <node id="TGM1" />
+    <node id="SLC3A2" />
+    <node id="COG3" />
+    <node id="TNFRSF10B" />
+    <edge source="BSG" target="SACM1L" />
+    <edge source="CD44" target="ALDH1A3" />
+    <edge source="CD44" target="NDUFS1" />
+    <edge source="CD44" target="S100A8" />
+    <edge source="CD44" target="S100A9" />
+    <edge source="CD44" target="SPINT2" />
+    <edge source="EGFR" target="AP1M1" />
+    <edge source="EGFR" target="ARF6" />
+    <edge source="EGFR" target="ATP2B1" />
+    <edge source="EGFR" target="HM13" />
+    <edge source="EGFR" target="MAP2K2" />
+    <edge source="EGFR" target="SLC26A6" />
+    <edge source="EGFR" target="TGM1" />
+    <edge source="SLC3A2" target="COG3" />
+    <edge source="SLC3A2" target="TNFRSF10B" />
+  </graph>
+</graphml>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="EGFR" />
+    <node id="SYMPK" />
+    <node id="CD44" />
+    <node id="SLC39A3" />
+    <node id="ARF4" />
+    <node id="CCT3" />
+    <node id="GLG1" />
+    <node id="NAMPT" />
+    <node id="S100A9" />
+    <node id="XP32" />
+    <node id="SLC3A2" />
+    <node id="VDAC1" />
+    <edge source="BSG" target="EGFR" />
+    <edge source="BSG" target="SYMPK" />
+    <edge source="EGFR" target="ARF4" />
+    <edge source="EGFR" target="CCT3" />
+    <edge source="EGFR" target="GLG1" />
+    <edge source="EGFR" target="NAMPT" />
+    <edge source="EGFR" target="S100A9" />
+    <edge source="EGFR" target="XP32" />
+    <edge source="CD44" target="SLC39A3" />
+    <edge source="SLC3A2" target="VDAC1" />
+  </graph>
+</graphml>

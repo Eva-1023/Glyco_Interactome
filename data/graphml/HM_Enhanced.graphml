@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BSG" />
+    <node id="ARF4" />
+    <node id="CDCP1" />
+    <node id="COPB1" />
+    <node id="DDOST" />
+    <node id="EHD4" />
+    <node id="HM13" />
+    <node id="ILVBL" />
+    <node id="ITGB1" />
+    <node id="LAMP1" />
+    <node id="NDUFS1" />
+    <node id="PFKP" />
+    <node id="SACM1L" />
+    <node id="SLC16A3" />
+    <node id="SLC25A11" />
+    <node id="SLC25A3" />
+    <node id="SLC25A4" />
+    <node id="SLC25A5" />
+    <node id="SLC27A4" />
+    <node id="SPINT2" />
+    <node id="STEAP3" />
+    <node id="TUBB" />
+    <node id="VIM" />
+    <node id="VMP1" />
+    <node id="WLS" />
+    <node id="CD44" />
+    <node id="AGPAT2" />
+    <node id="ARF6" />
+    <node id="ATP6V1H" />
+    <node id="GLG1" />
+    <node id="PTK7" />
+    <node id="SRC" />
+    <node id="SURF4" />
+    <node id="TMED1" />
+    <node id="EGFR" />
+    <node id="ACIN1" />
+    <node id="ATP2A2" />
+    <node id="COG3" />
+    <node id="EBP" />
+    <node id="HAX1" />
+    <node id="HSPB1" />
+    <node id="MAP2K2" />
+    <node id="SLC12A2" />
+    <node id="TNFRSF10B" />
+    <node id="SLC3A2" />
+    <node id="ARF5" />
+    <node id="PHB1" />
+    <node id="SLC7A5" />
+    <edge source="BSG" target="ARF4" />
+    <edge source="BSG" target="CDCP1" />
+    <edge source="BSG" target="COPB1" />
+    <edge source="BSG" target="DDOST" />
+    <edge source="BSG" target="EHD4" />
+    <edge source="BSG" target="HM13" />
+    <edge source="BSG" target="ILVBL" />
+    <edge source="BSG" target="ITGB1" />
+    <edge source="BSG" target="LAMP1" />
+    <edge source="BSG" target="NDUFS1" />
+    <edge source="BSG" target="PFKP" />
+    <edge source="BSG" target="SACM1L" />
+    <edge source="BSG" target="SLC16A3" />
+    <edge source="BSG" target="SLC25A11" />
+    <edge source="BSG" target="SLC25A3" />
+    <edge source="BSG" target="SLC25A4" />
+    <edge source="BSG" target="SLC25A5" />
+    <edge source="BSG" target="SLC27A4" />
+    <edge source="BSG" target="SPINT2" />
+    <edge source="BSG" target="STEAP3" />
+    <edge source="BSG" target="TUBB" />
+    <edge source="BSG" target="VIM" />
+    <edge source="BSG" target="VMP1" />
+    <edge source="BSG" target="WLS" />
+    <edge source="ARF4" target="SLC3A2" />
+    <edge source="CDCP1" target="EGFR" />
+    <edge source="ITGB1" target="EGFR" />
+    <edge source="LAMP1" target="CD44" />
+    <edge source="CD44" target="AGPAT2" />
+    <edge source="CD44" target="ARF6" />
+    <edge source="CD44" target="ATP6V1H" />
+    <edge source="CD44" target="GLG1" />
+    <edge source="CD44" target="PTK7" />
+    <edge source="CD44" target="SRC" />
+    <edge source="CD44" target="SURF4" />
+    <edge source="CD44" target="TMED1" />
+    <edge source="CD44" target="EGFR" />
+    <edge source="ATP6V1H" target="EGFR" />
+    <edge source="SRC" target="EGFR" />
+    <edge source="EGFR" target="ACIN1" />
+    <edge source="EGFR" target="ATP2A2" />
+    <edge source="EGFR" target="COG3" />
+    <edge source="EGFR" target="EBP" />
+    <edge source="EGFR" target="HAX1" />
+    <edge source="EGFR" target="HSPB1" />
+    <edge source="EGFR" target="MAP2K2" />
+    <edge source="EGFR" target="SLC12A2" />
+    <edge source="EGFR" target="TNFRSF10B" />
+    <edge source="SLC3A2" target="ARF5" />
+    <edge source="SLC3A2" target="PHB1" />
+    <edge source="SLC3A2" target="SLC7A5" />
+  </graph>
+</graphml>
