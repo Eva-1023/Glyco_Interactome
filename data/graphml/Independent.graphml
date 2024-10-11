@@ -11,7 +11,6 @@
     <node id="HAX1" />
     <node id="LPCAT1" />
     <node id="PHB1" />
-    <node id="SLC26A6" />
     <node id="SLC3A2" />
     <node id="TUFM" />
     <node id="CD44" />
@@ -38,7 +37,6 @@
     <edge source="BSG" target="HAX1" />
     <edge source="BSG" target="LPCAT1" />
     <edge source="BSG" target="PHB1" />
-    <edge source="BSG" target="SLC26A6" />
     <edge source="BSG" target="SLC3A2" />
     <edge source="BSG" target="TUFM" />
     <edge source="SLC3A2" target="ATP1A1" />
