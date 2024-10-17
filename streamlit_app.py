@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 import os
 import re 
@@ -131,6 +132,8 @@ def figure_page():
             placeholder_filename = 'data/blank.png'
             st.image(placeholder_filename, use_column_width=True, caption="No data available")
 # Define a function to display the Home page content
+from PIL import Image
+Image.MAX_IMAGE_PIXELS = None
 def home_page():
     st.title('Abstract')
     st.image('data/image/Abstract.jpg', use_column_width=True)
@@ -144,11 +147,51 @@ def home_page():
 # Define a function to display the Contact page content
 def contact_page():
     st.title('Contact Us')
+    #data = pd.DataFrame({'lat':[22.73],'lon':[113.53]})
+    #st.map(data)
+    # import pydeck as pdk
+    #
+    # # 定义数据
+    # data = [{'lat': 22.73, 'lon': 113.53, 'name': 'GREATER BAY AREA INSTITUTE OF PRECISION MEDICINE'}]
+    #
+    # # 定义地图图层
+    # layer = pdk.Layer(
+    #     'ScatterplotLayer',
+    #     data=data,
+    #     get_position='[lon, lat]',
+    #     get_radius=1000,
+    #     get_color=[255, 0, 0],
+    #     pickable=True
+    # )
+    #
+    # # 定义地图视图
+    # view_state = pdk.ViewState(
+    #     latitude=22.7894,
+    #     longitude=113.5500,
+    #     zoom=14,
+    #     pitch=50
+    # )
+    #
+    # # 定义标注图层
+    # text_layer = pdk.Layer(
+    #     "TextLayer",
+    #     data=data,
+    #     get_position='[lon, lat]',
+    #     get_text='name',
+    #     get_color=[0, 0, 0, 200],
+    #     get_size=16,
+    #     get_alignment_baseline="'bottom'"
+    # )
+    #
+    # # 显示地图
+    # r = pdk.Deck(layers=[layer, text_layer], initial_view_state=view_state,map_style='mapbox://styles/mapbox/light-v9')
+    # st.pydeck_chart(r)
     text = """
-        <div style="text-align: justify; text-indent: 2em;font-size:24px">
-            You can reach out to us at liy24@m.fudan.edu.cn
-        </div>
-        """
+    <div style="text-align: justify; font-size: 24px">
+        More information is available here: <a href="https://github.com/Eva-1023/Glyco_Interactome">GitHub Repository.</a><br>
+        If you have any question, you can reach out to us at <a href="mailto:liy24@m.fudan.edu.cn">liy24@m.fudan.edu.cn</a>
+    </div>
+    """
     st.write(text, unsafe_allow_html=True)
 
 
