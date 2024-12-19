@@ -127,16 +127,16 @@ def figure_page():
         file_exists = os.path.exists(figure_filename)
 
         if file_exists:
-            st.image(figure_filename, use_column_width=True, caption=f"{caption}: {edge_name}")
+            st.image(figure_filename,  use_container_width =True, caption=f"{caption}: {edge_name}")
         else:
             placeholder_filename = 'data/blank.png'
-            st.image(placeholder_filename, use_column_width=True, caption="No data available")
+            st.image(placeholder_filename,  use_container_width =True, caption="No data available")
 # Define a function to display the Home page content
 from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 def home_page():
     st.title('Abstract')
-    st.image('data/image/Abstract.jpg', use_column_width=False)
+    st.image('data/image/Abstract.jpg',  use_container_width =False)
     text = """
         <div style="text-align: justify; text-indent: 2em;font-size:24px">
             Protein-protein interactions (PPIs) offer crucial insights into comprehending the complicated molecular mechanisms and signaling pathways within cells that regulate developmental processes or the progression of disease-related phenotypes. Meanwhile, proteins are frequently subject to post-translational modifications (PTMs) that enable the regulation of their functions for specific cellular events. One of the key challenges in studying PPIs lies in the development of methods to detect changes in interactions resulting from these PTMs. Notably, the glycosylation of cell membrane proteins to form the glycocalyx presents a considerable hurdle, as the significance of various types of glycans has largely been overlooked in most studies of membrane protein interactions. In this study, we introduced a novel approach termed glycan-dependent affinity purification followed by mass spectrometry analysis (GAP-MS) to assess variations in PPIs for any glycoprotein of interest under different glycosylation conditions. Within the framework of GAP-MS, we combined the manipulation of Glycan Phenotypes in cultured cells using a set of glycan modifier toolboxes with the classic affinity purification coupled with mass spectrometry analysis (AP-MS) approach. As a proof of principle, we selected four glycoproteins, namely BSG, CD44, EGFR, and SLC3A2, as baits to compare their co-purified partners across five distinct Glycan Phenotypes. The findings demonstrated the capability of GAP-MS in identifying PPIs that are influenced by altered glycosylation status. PPI networks based on the interactions of the aforementioned four baits were generated for each Glycan Phenotype. Moreover, the GAP-MS workflow is well-suited for systematically investigating a broader collection of glycoproteins of interest compared to the study relied on the glycosite mutagenesis, thereby allowing for the expansion of these networks as more bait proteins are analyzed in future studies, which assists the development of new therapeutics targeting glycosylated proteins.
