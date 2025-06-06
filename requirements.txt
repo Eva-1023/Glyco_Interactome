@@ -1,4 +1,16 @@
-matplotlib
-networkx
-streamlit
-pyvis
+# Core data processing and visualization
+matplotlib>=3.5.0
+networkx>=2.8.0
+pandas>=1.4.0
+
+# Streamlit and web components
+streamlit>=1.25.0
+
+# Network visualization
+pyvis>=0.3.0
+
+# Image processing
+Pillow>=9.0.0
+
+# For typing annotations (Python < 3.8 compatibility)
+typing-extensions>=4.0.0
