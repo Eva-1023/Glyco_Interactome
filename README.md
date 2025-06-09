@@ -17,6 +17,13 @@ In this study, we introduced a novel approach termed **glycan-dependent affinity
 
 As a proof of principle, we selected four glycoproteins, namely **BSG, CD44, EGFR, and SLC3A2**, as baits to compare their co-purified partners across five distinct Glycan Phenotypes. The findings demonstrated the capability of GAP-MS in identifying PPIs that are influenced by altered glycosylation status. PPI networks based on the interactions of the aforementioned four baits were generated for each Glycan Phenotype. Moreover, the GAP-MS workflow is well-suited for systematically investigating a broader collection of glycoproteins of interest compared to studies relying on glycosite mutagenesis, thereby allowing for the expansion of these networks as more bait proteins are analyzed in future studies, which assists the development of new therapeutics targeting glycosylated proteins.
 
+🌐 **Accessing the Application**
+
+You can directly access the application via the following link:  
+[https://glycointeractome.org/](https://glycointeractome.org/)
+
+If the website is unavailable, please follow the **Local Development Setup** instructions below to run the application on your local machine.
+
 ## 🚀 Features
 
 - **Interactive Network Visualization**: Explore protein-protein interaction networks under different glycosylation conditions
