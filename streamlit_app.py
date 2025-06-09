@@ -19,6 +19,10 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 from PIL import Image
+#auto wake
+STREAMLIT_APPS = [
+    "https://glycointeractome-2024.streamlit.app/"
+]
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
