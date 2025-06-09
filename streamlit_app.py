@@ -269,7 +269,7 @@ def figure_page():
             if os.path.exists(figure_filename):
                 st.image(
                     figure_filename,
-                    use_container_width=True,
+                    #use_container_width=True,
                     caption=f"{icon} {caption}: {edge_name}"
                 )
             else:
@@ -277,7 +277,7 @@ def figure_page():
                 if os.path.exists(DATA_PATHS['blank_image']):
                     st.image(
                         DATA_PATHS['blank_image'],
-                        use_container_width=True,
+                        #use_container_width=True,
                         caption=f"⚠️ No data available for {caption}"
                     )
                 else:
@@ -292,7 +292,7 @@ def home_page():
     
     # Display abstract image if available
     if os.path.exists(DATA_PATHS['abstract_image']):
-        st.image(DATA_PATHS['abstract_image'], use_container_width=False)
+        st.image(DATA_PATHS['abstract_image'])
     else:
         st.warning("⚠️ Abstract image not found")
     
@@ -335,33 +335,45 @@ def contact_page():
     """Display the contact information page."""
     st.title('📧 Contact Us')
     st.markdown("---")
-    
-    # Contact information
+
+    # Project Information
     st.markdown("""
-    <div style="text-align: justify; font-size: 20px; line-height: 1.8;">
+    <div style="font-size: 18px;">
         <h3>🔗 Project Information</h3>
         <p>
-            For more detailed information about this project, including source code, 
-            data processing methods, and additional resources, please visit our 
+            For more detailed information about this project, please visit our 
             <a href="https://github.com/Eva-1023/Glyco_Interactome" target="_blank">
-                <strong>GitHub Repository</strong>
+                GitHub Repository
             </a>.
         </p>
-        
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Contact Information
+    st.markdown("""
+    <div style="font-size: 18px;">
         <h3>📨 Get in Touch</h3>
         <p>
-            If you have any questions, suggestions, or would like to collaborate, 
-            please don't hesitate to reach out to us at:
-            <br><br>
-            <strong>Email:</strong> 
-            <a href="mailto:liy24@m.fudan.edu.cn">liy24@m.fudan.edu.cn</a>
+            If you have any questions, please email us at:
+            <br>
+            <a href="mailto:lyi24@m.fudan.edu.cn">lyi24@m.fudan.edu.cn</a>
         </p>
-        
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Institution
+    st.markdown("""
+    <div style="font-size: 18px;">
         <h3>🏛️ Institution</h3>
         <p>
             This research was conducted at the Greater Bay Area Institute of Precision Medicine.
         </p>
-        
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Citation
+    st.markdown("""
+    <div style="font-size: 18px;">
         <h3>📄 Citation</h3>
         <p>
             If you use this tool or data in your research, please cite our work appropriately.
