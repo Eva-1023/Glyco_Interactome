@@ -200,7 +200,7 @@ If you use this tool or data in your research, please cite our work:
 
 ## 📞 Contact
 
-- **Email**: [liy24@m.fudan.edu.cn](mailto:liy24@m.fudan.edu.cn)
+- **Email**: [lyi24@m.fudan.edu.cn](mailto:lyi24@m.fudan.edu.cn)
 - **Institution**: Greater Bay Area Institute of Precision Medicine
 - **GitHub**: [@Eva-1023](https://github.com/Eva-1023)
 
