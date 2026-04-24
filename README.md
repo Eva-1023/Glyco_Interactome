@@ -208,7 +208,8 @@ If you use this tool or data in your research, please cite our work:
 ## 📞 Contact
 
 - **Email**: [lyi24@m.fudan.edu.cn](mailto:lyi24@m.fudan.edu.cn)
-- **Institution**: Greater Bay Area Institute of Precision Medicine
+             [axexie@fudan.edu.cn](mailto:axexie@fudan.edu.cn)
+- **Institution**: Fudan University
 - **GitHub**: [@Eva-1023](https://github.com/Eva-1023)
 
 ## 📜 License
