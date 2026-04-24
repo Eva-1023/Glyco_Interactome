@@ -361,6 +361,7 @@ def contact_page():
             If you have any questions, please email us at:
             <br>
             <a href="mailto:lyi24@m.fudan.edu.cn">lyi24@m.fudan.edu.cn</a>
+             <br>
              <a href="mailto:axexie@fudan.edu.cn">axexie@fudan.edu.cn</a>
         </p>
     </div>
