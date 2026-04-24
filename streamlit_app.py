@@ -361,6 +361,7 @@ def contact_page():
             If you have any questions, please email us at:
             <br>
             <a href="mailto:lyi24@m.fudan.edu.cn">lyi24@m.fudan.edu.cn</a>
+             <a href="mailto:axexie@fudan.edu.cn">axexie@fudan.edu.cn</a>
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -370,7 +371,7 @@ def contact_page():
     <div style="font-size: 18px;">
         <h3>🏛️ Institution</h3>
         <p>
-            This research was conducted at the Greater Bay Area Institute of Precision Medicine.
+            This research was conducted at Fudan University.
         </p>
     </div>
     """, unsafe_allow_html=True)
